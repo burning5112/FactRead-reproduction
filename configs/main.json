@@ -1,0 +1,42 @@
+{
+  "panel": "../assets/data/panel.jsonl",
+  "donors": "../assets/data/donors.jsonl",
+  "models": {
+    "backbone": "../assets/backbone",
+    "tokenizer": "../assets/tokenizer",
+    "atlaskv_queries": "../assets/models/atlaskv_queries.safetensors",
+    "atlaskv_encoder": "../assets/models/atlaskv_encoder.safetensors",
+    "kblam": "../assets/models/kblam.safetensors",
+    "srki": "../assets/models/srki.safetensors",
+    "factread": "../assets/models/factread.safetensors"
+  },
+  "features": {
+    "cc": {
+      "keys": "../assets/data/cc_keys.npy",
+      "values": "../assets/data/cc_values.npy"
+    },
+    "enron": {
+      "keys": "../assets/data/enron_keys.npy",
+      "values": "../assets/data/enron_values.npy"
+    },
+    "pes2o": {
+      "keys": "../assets/data/pes2o_keys.npy",
+      "values": "../assets/data/pes2o_values.npy"
+    }
+  },
+  "checksums": {
+    "../assets/data/cc_keys.npy": "5b5a51ed02a770d86f598fed3c8d6c6f5ff11c891e14caaa9865f491994d7b0c",
+    "../assets/data/cc_values.npy": "7d8d98cf4ed79ffe4e28c41430268e25d022ae31db8eb6a230ef86eef73d8ac3",
+    "../assets/data/donors.jsonl": "19af868629bfb586affbf1e10ab2823c1944225992b9747f16a1a7bf360a4126",
+    "../assets/data/enron_keys.npy": "6c03ce6f15e8ab724184da558803abfd1e7fdeed7b3c134bf502d5d6c42a896b",
+    "../assets/data/enron_values.npy": "cc100bf7bb1d942bafc2fc0d43b6a34b5e1185770b822d7a55ac834354dd95ee",
+    "../assets/data/panel.jsonl": "1391bb11773909835bd04f5754ea83b0dfb0173763926095ea9415743151645e",
+    "../assets/data/pes2o_keys.npy": "6eed8e7955c2d3dbeddd9e284c039933bf19444f054bbf476222f3e28c5ba089",
+    "../assets/data/pes2o_values.npy": "1418b7141a8e51a4a7867e8136f19b5561c37f4adbdf70c8c39e981fc0609981",
+    "../assets/models/atlaskv_encoder.safetensors": "7db4c87269b2d208dbc0669484fb7d6266190d67a6fc960a1e78435a8316f2ea",
+    "../assets/models/atlaskv_queries.safetensors": "09f8a16890d6f6dd04bae8f0ed84dcdea191e30b5f2a3307454ecedfad61b930",
+    "../assets/models/factread.safetensors": "84d8d558705a97a30c6032dbc9f47fa70f2de637231dc302054ae1d154f3a4ef",
+    "../assets/models/kblam.safetensors": "36cf85c5a9e3b25ae1e0a0a323e9f31499c9049b29a15bb7b22fc65e989f6e4a",
+    "../assets/models/srki.safetensors": "afb0a55bdd479249b3e0544642e751bd8fcb1c0866f7393c0acc2f09a8c9e0c2"
+  }
+}
