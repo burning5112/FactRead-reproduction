@@ -13,13 +13,15 @@ pip install -e .
 python -m unittest discover -s tests
 ```
 
-Download the evaluation inputs and trained parameters from the anonymous mirror:
+Download the complete repository ZIP from the anonymous page and extract it. The `artifacts/` directory contains the evaluation inputs and trained parameters in archive parts. Restore them with:
 
 ```bash
 python -m factread.download_assets --output assets
 ```
 
-The download is about 2 GB. Each part and extracted file is checked against its SHA-256 digest. It includes the four fitted knowledge interfaces, 276 evaluation questions, eight candidates per question, fixed knowledge banks, Value donor assignments, precomputed 384-dimensional MiniLM features, and tokenizer assets.
+If you downloaded only the code, add `--repository-url` followed by the anonymous repository URL from your browser to fetch the missing archive parts.
+
+The archive parts total about 2 GB. Each part and extracted file is checked against its SHA-256 digest. It includes the four fitted knowledge interfaces, 276 evaluation questions, eight candidates per question, fixed knowledge banks, Value donor assignments, precomputed 384-dimensional MiniLM features, and tokenizer assets.
 
 Download the common frozen language checkpoint from the original AtlasKV distribution:
 

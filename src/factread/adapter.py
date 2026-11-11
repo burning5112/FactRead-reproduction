@@ -17,7 +17,7 @@ class ReadoutAdapter(nn.Module):
         attention = {int(module.layer_idx): module for module in model.modules() if getattr(module, 'layer_idx', None) is not None and hasattr(module, 'q_proj_kg')}
         missing = sorted(set(layers) - attention.keys())
         if missing:
-            raise ValueError(f'Requested FactOp layers are not AtlasKV injection layers: {missing}')
+            raise ValueError(f'Requested FactRead layers are not AtlasKV injection layers: {missing}')
         self.layers = tuple(layers)
         self.matrix_layers = frozenset(self.layers)
         self.readers = nn.ModuleDict({str(layer): RecordCoupledKnowledgeRead(mode=mode, key_dim=key_dim, heads=heads, head_dim=head_dim, per_head_rank=per_head_rank, selected_records=selected_records, query_chunk=query_chunk) for layer in layers})
@@ -74,7 +74,7 @@ class ReadoutAdapter(nn.Module):
 
             def prepare_values(values, layer_idx=layer):
                 if self._bank is None:
-                    raise RuntimeError('Call set_bank before a Flat-KV FactOp forward')
+                    raise RuntimeError('Call set_bank before a Flat-KV FactRead forward')
                 (raw_keys, raw_values) = self._bank
                 if self.effect_scale == 0.0:
                     context = BankContext(raw_keys, None, None, None, values, values)
@@ -107,7 +107,7 @@ class ReadoutAdapter(nn.Module):
             def read_output(base, gamma, layer_idx=layer, cache_position=None, position_ids=None, token_hidden=None):
                 context = self._contexts.get(layer_idx)
                 if context is None:
-                    raise RuntimeError(f'FactOp Value context missing for layer {layer_idx}')
+                    raise RuntimeError(f'FactRead Value context missing for layer {layer_idx}')
                 if self.collect_mass_stats and layer_idx not in self.last_stats:
                     from .profile import profile_scope
                     with profile_scope('factread/mass_stats_sync'):
@@ -212,7 +212,7 @@ class ReadoutAdapter(nn.Module):
             raise ValueError('Matrix layer subset contains duplicates')
         unknown = sorted(set(selected) - set(self.layers))
         if unknown:
-            raise ValueError(f'Matrix layer subset is outside installed FactOp layers: {unknown}')
+            raise ValueError(f'Matrix layer subset is outside installed FactRead layers: {unknown}')
         self.matrix_layers = frozenset(selected)
 
     def _stage_read_mask(self, base, layer_idx: int, cache_position=None, position_ids=None):
@@ -294,7 +294,7 @@ class ReadoutAdapter(nn.Module):
 
     def set_metric_intervention(self, mode: str='none', qids: list[str] | None=None) -> None:
         if mode not in ('none', 'common', 'identity', 'scalar', 'permuted', 'linear_norm', 'no_reference_norm', 'rayleigh', 'head_scalar', 'block_diag', 'balanced_projection'):
-            raise ValueError(f'Unsupported FactOp metric intervention: {mode}')
+            raise ValueError(f'Unsupported FactRead metric intervention: {mode}')
         if mode != self.metric_intervention:
             self._contexts.clear()
             self._prepared_values.clear()
@@ -335,7 +335,7 @@ class ReadoutAdapter(nn.Module):
                     continue
                 module = self._attention_modules[layer_idx]
                 if not hasattr(module, 'o_proj'):
-                    raise RuntimeError(f'FactOp layer {layer_idx} lacks the expected output projection')
+                    raise RuntimeError(f'FactRead layer {layer_idx} lacks the expected output projection')
 
                 def add_residual_intervention(_projection, _inputs, output, idx=layer_idx):
                     delta = self._residual_pending.pop(idx, None)
@@ -400,7 +400,7 @@ class ReadoutAdapter(nn.Module):
 
     def _summarize_mass(self, gamma: torch.Tensor) -> dict:
         if self._bank is None:
-            raise RuntimeError('FactOp bank is not set')
+            raise RuntimeError('FactRead bank is not set')
         g = gamma.detach().float()[:, :, -1, :]
         (batch, heads, n) = g.shape
         count = min(8, n)

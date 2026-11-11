@@ -10,3 +10,5 @@ The packaged versions include the attention callbacks and Llama compatibility ch
 All four methods use the same frozen Llama-3.1-8B-Instruct language backbone and precomputed all-MiniLM-L6-v2 record embeddings. The SR-KI implementation uses supervised attention in this common interface: the layer-15 knowledge Query and Key branches are adapted while the Value branch stays frozen. It is the common-backbone implementation evaluated in the paper.
 
 The base language checkpoint is downloaded from the original AtlasKV model distribution. It retains its original model terms. The included trained parameters contain the fitted knowledge interface, rather than the frozen language backbone. Dataset terms follow the original CC, Enron, and Pes2O sources used by AtlasKV.
+
+Built with Llama. Llama 3.1 is licensed under the Llama 3.1 Community License; the notice is included in `LICENSES/Llama-3.1.txt`. The project MIT license applies to the reproduction code, subject to the retained third-party notices.

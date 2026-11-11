@@ -585,7 +585,7 @@ class AtlaskvLlamaAttention(nn.Module):
                             del root_kb_keys
                             torch.cuda.empty_cache()
                             # ====================================================================
-                            # select covered inter layer keys from CPU 
+                            # select covered inter layer keys from CPU
                             select_inter_kb_indices = np.intersect1d(select_inter_key_idx.cpu(), inter_kb_indices.cpu())
                             select_inter_local_key_idx = np.where(np.isin(inter_kb_indices, select_inter_kb_indices))[0]
                             select_inter_kb_keys_cpu = inter_kb_keys[:,:,select_inter_local_key_idx,:]

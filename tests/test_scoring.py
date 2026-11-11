@@ -6,6 +6,12 @@ from factread.evaluation import score
 
 
 class ScoringTest(unittest.TestCase):
+    def test_all_model_loaders_import(self):
+        from factread.loading import load
+        from atlaskv.models.llama3_model import AtlaskvLlamaForCausalLM
+        from kblam.models.llama3_model import KblamLlamaForCausalLM
+        self.assertTrue(callable(load))
+
     def test_prefix_excluded_and_candidates_scored_serially(self):
         seen = []
         class Model:
