@@ -1,0 +1,132 @@
+{
+  "format": "FactRead reproduction assets v1",
+  "archive_sha256": "bb4c55e0b6bc35b05ea51edbc7c5a1d2e539824ef5ed32ea9a8bfd4293251b85",
+  "archive_bytes": 2042781142,
+  "parts": [
+    {
+      "path": "artifacts/assets.part000.bin",
+      "bytes": 83886080,
+      "sha256": "e9e4fc4a98ffa548697af66a909562d483055fcfa3795f6cc095d3a14be447f0"
+    },
+    {
+      "path": "artifacts/assets.part001.bin",
+      "bytes": 83886080,
+      "sha256": "e984231704966e9b0b1065e3d74275ffa37e440b72937fb6ca919b6a56afd93c"
+    },
+    {
+      "path": "artifacts/assets.part002.bin",
+      "bytes": 83886080,
+      "sha256": "9f07edf97532a98713edf32e5da66d7af3d707e9ccb3b5fd7104c86367fe2688"
+    },
+    {
+      "path": "artifacts/assets.part003.bin",
+      "bytes": 83886080,
+      "sha256": "6616f4842bb3fe9bb8a146bac277d28852d3c251687d13355802daa189d6c20b"
+    },
+    {
+      "path": "artifacts/assets.part004.bin",
+      "bytes": 83886080,
+      "sha256": "ff40ea8b10b4bcda056848e695cd07f77055e2c19332c2c2395c3cc0b413c062"
+    },
+    {
+      "path": "artifacts/assets.part005.bin",
+      "bytes": 83886080,
+      "sha256": "e1816d5f0fa9ad9ec781f67de31dc47b756235441cd285833f9e36c9f40e9ad1"
+    },
+    {
+      "path": "artifacts/assets.part006.bin",
+      "bytes": 83886080,
+      "sha256": "40e6cae6b7013e55d8fe71d6265eee6522778d046f140e7dc0c5f24a3b25f605"
+    },
+    {
+      "path": "artifacts/assets.part007.bin",
+      "bytes": 83886080,
+      "sha256": "9c57b68df3566092beb0837a85630d25bcf7aee8a9ed2242c65b09e8378d9f65"
+    },
+    {
+      "path": "artifacts/assets.part008.bin",
+      "bytes": 83886080,
+      "sha256": "7c7cc9461398a9435daf8a8f62e81b25af987070e234f729bebaa31915194fe5"
+    },
+    {
+      "path": "artifacts/assets.part009.bin",
+      "bytes": 83886080,
+      "sha256": "5a85da4c14900d7d66d6e7be1cb503726f6cfc6273325b84beef9032cbcabd39"
+    },
+    {
+      "path": "artifacts/assets.part010.bin",
+      "bytes": 83886080,
+      "sha256": "e0a4c83932a254368cf3ce6580818bec1f6afaaca7f932d5540f086945087e6f"
+    },
+    {
+      "path": "artifacts/assets.part011.bin",
+      "bytes": 83886080,
+      "sha256": "54f28c9dd09e9983f3b8ba815e0623ca863bc643a3c1efb06eb9878f5aebd1df"
+    },
+    {
+      "path": "artifacts/assets.part012.bin",
+      "bytes": 83886080,
+      "sha256": "f1403c64850e50f1171539c9c1f06476c7a6537027f9cd59bd674088186eee5e"
+    },
+    {
+      "path": "artifacts/assets.part013.bin",
+      "bytes": 83886080,
+      "sha256": "ac493287796974be6feab92644c8d5f6a981c94dce2aaa417a40526d8f78d746"
+    },
+    {
+      "path": "artifacts/assets.part014.bin",
+      "bytes": 83886080,
+      "sha256": "166688435de6179ab24ed5d81db9269af7aece61cd168d1f1e56928d5a61246d"
+    },
+    {
+      "path": "artifacts/assets.part015.bin",
+      "bytes": 83886080,
+      "sha256": "83859f63603eacaabbb33bc3cb6e5501851354d7ad4ac716d89594fd423c05d2"
+    },
+    {
+      "path": "artifacts/assets.part016.bin",
+      "bytes": 83886080,
+      "sha256": "ab2b071052fdbbbbaff95d30f7b62a198d77c91316d1138e1b1da141d32f8f1e"
+    },
+    {
+      "path": "artifacts/assets.part017.bin",
+      "bytes": 83886080,
+      "sha256": "9d49d238abff6eb6cd8bc5ed08055e3df9b99eb72eb50e80f9e370369f5507ec"
+    },
+    {
+      "path": "artifacts/assets.part018.bin",
+      "bytes": 83886080,
+      "sha256": "028ec767f0363e47a3297c0140804dabdb6478492c7614c195d24fe696a62c75"
+    },
+    {
+      "path": "artifacts/assets.part019.bin",
+      "bytes": 83886080,
+      "sha256": "8b6ed541a0798a20717f816e0eb959bc78d5c18659ae15bcfbab5e7da22a51be"
+    },
+    {
+      "path": "artifacts/assets.part020.bin",
+      "bytes": 83886080,
+      "sha256": "fc601356a2cca94aca5e948aa4aa36eade564b3ce53f7f04484c567b6b008734"
+    },
+    {
+      "path": "artifacts/assets.part021.bin",
+      "bytes": 83886080,
+      "sha256": "b8fd0f4dbc40ab250799562846b0d0328b775ae41b8b4e99db275fcb48852485"
+    },
+    {
+      "path": "artifacts/assets.part022.bin",
+      "bytes": 83886080,
+      "sha256": "6e8823de089d2e67210be9c6cf4c97f437db967b21c6885bc08a04c17a2ff61c"
+    },
+    {
+      "path": "artifacts/assets.part023.bin",
+      "bytes": 83886080,
+      "sha256": "fca3cf396044903330b3345c6b4a9ff151d54ead5767c647b6d5054bd46a69ce"
+    },
+    {
+      "path": "artifacts/assets.part024.bin",
+      "bytes": 29515222,
+      "sha256": "99fcd29aeca471f92e6a4b7ef5609e6e0ec5f76e1c1b020bdc4a603ee1eb96a3"
+    }
+  ]
+}
